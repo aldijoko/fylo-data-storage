@@ -1,0 +1,154 @@
+:root {
+    --paleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --darkBlue: hsl(228, 56%, 26%);
+    --veryDark: hsl(229, 57%, 11%);
+
+
+}
+
+body {
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    color: var(--paleBlue);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    min-width: 900px;
+    display: flex;
+}
+
+.contentLeft {
+    width: 40%;
+    flex: 1 1 auto;
+    background-color: var(--darkBlue);
+    border-radius: 10px 70px 10px 10px;
+    padding: 30px ;
+    margin: 10px;
+}
+
+.iconList {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding-top: 20px ;
+}
+
+.iconMenu {
+    /* border-radius: 50%; */
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--veryDark);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.contentRight {
+    width: 60%;
+    flex: 1 1 500px;
+    /* border: 5px solid goldenrod; */
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 10px 10px 10px;
+    padding: 30px 30px 30px 30px;
+    margin: 50px 10px 10px 10px;
+}
+
+.rightTxt {
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.bar {
+    width: 100%;
+  background-color: var(--veryDark);
+  border-radius: 20px;
+  height: 20px;
+  
+}
+
+.skills {
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 20px;
+    height: 20px;
+    width: calc((815/1000)*100%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+.circle {
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    margin: 3px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -100px;
+    right: -80px;
+    border: 1px solid var(--paleBlue);
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
+}
+
+.tooltip::after {
+    content: "";
+  position: absolute;
+  top: 100%;
+  right: -1px;
+  /* margin-right: 5px; */
+  border-width: 12px;
+  border-style: solid;
+  border-color: white white transparent transparent;
+}
+
+.circle:hover .tooltip {
+    visibility: visible;
+}
+
+.tooltip h1{
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.tooltip span {
+    text-align: center;
+    font-size: 12px;
+    color: var(--GrayishBlue);
+    font-weight: 700;
+}
